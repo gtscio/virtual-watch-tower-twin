@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "190a8fda-650e-4498-9e54-36ce0c6b2d85",
+		"name": "TWIN Core",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "579084"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@node\",\n    \"password\": \"czKxK=w5UgAZ}}Lh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{TWIN_WORKBENCH}}/authentication/login",
+							"host": [
+								"{{TWIN_WORKBENCH}}"
+							],
+							"path": [
+								"authentication",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Salus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@node\",\n    \"password\": \"MD0$j~!ZURwOT%~6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{TWIN_SALUS}}/authentication/login",
+							"host": [
+								"{{TWIN_SALUS}}"
+							],
+							"path": [
+								"authentication",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attestation",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"attestationObject\": {\n        \"@context\": [\"https://schema.org\", \"https://www.w3.org/ns/credentials/v2\"],\n        \"@id\": \"https://salus.com/doc1234\",\n        \"@type\": \"DigitalDocument\",\n        \"fileFormat\": \"application/pdf\",\n        \"digestSRI\": \"sha384-Ml/HrjlBCNWyAX91hr6LFV2Y3heB5Tcr6IeE4/Tje8YyzYBM8IhqjHWiWpr8+ZbYU\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{TWIN_WORKBENCH}}/attestation",
+							"host": [
+								"{{TWIN_WORKBENCH}}"
+							],
+							"path": [
+								"attestation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Salus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6aW90YToyMzA0YWE5NzoweDI2NDI1YTIwZGZmNWRlMzM5OTg1YTI1OTUzODdjNTJmZmE2ZWQwY2I0MmVmZGMxOGFhM2UyOTFmNzJiNDI3MWIiLCJleHAiOjE3NTAyNTg0NzF9.5_7amZxQqrvJcsKl7T8FwlfrJr5_xJNdgG3g56FTZ7W8A1lNiDgbtOS1ngkQ9OPqEtotaqB54Exoo19-cLu7DQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"attestationObject\": {\n        \"@context\": [\"https://schema.org\", \"https://www.w3.org/ns/credentials/v2\"],\n        \"@id\": \"https://salus.com/doc1234\",\n        \"@type\": \"DigitalDocument\",\n        \"fileFormat\": \"application/pdf\",\n        \"digestSRI\": \"sha384-Ml/HrjlBCNWyAX91hr6LFV2Y3heB5Tcr6IeE4/Tje8YyzYBM8IhqjHWiWpr8+ZbYU\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{TWIN_SALUS}}/attestation",
+							"host": [
+								"{{TWIN_SALUS}}"
+							],
+							"path": [
+								"attestation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transfer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"holderIdentity\": \"did:iota:e678123a:0x0f70d85dfb612b105915506182222a8998c4fffde04db115c46298de4adce118\",\n    \"holderAddress\": \"0x088bee8e9a4e79e762b4072db3d80fb53bc9e2eaa7a7f6c50334bffd660484e6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{TWIN_WORKBENCH}}/attestation/attestation:nft:bmZ0OmlvdGE6ZGV2bmV0OjB4NmQ0NmM3MDczYWM5NjAxMzAzYTAxMGY4NzE4MDE5NGVhMzdiMjQxYmFmZmU2MzQ1NjE2ZmNkYmNhODdkNzFlYzoweDUzYzA4NTE3NzgzZDk1NWU3NjUyOTkwOGE5NWQwZGQ3ZTIyN2U3ZDYwYzI2YWVkMmI4ZmU2ZWI3ZjUzZjdlMjQ=/transfer",
+							"host": [
+								"{{TWIN_WORKBENCH}}"
+							],
+							"path": [
+								"attestation",
+								"attestation:nft:bmZ0OmlvdGE6ZGV2bmV0OjB4NmQ0NmM3MDczYWM5NjAxMzAzYTAxMGY4NzE4MDE5NGVhMzdiMjQxYmFmZmU2MzQ1NjE2ZmNkYmNhODdkNzFlYzoweDUzYzA4NTE3NzgzZDk1NWU3NjUyOTkwOGE5NWQwZGQ3ZTIyN2U3ZDYwYzI2YWVkMmI4ZmU2ZWI3ZjUzZjdlMjQ=",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Identity",
+			"item": [
+				{
+					"name": "Create Identity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{TWIN_WORKBENCH}}/identity",
+							"host": [
+								"{{TWIN_WORKBENCH}}"
+							],
+							"path": [
+								"identity"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data Space Connector",
+			"item": [
+				{
+					"name": "Act Notify - Consignment",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/ld+json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"@context\": [\n        \"https://www.w3.org/ns/activitystreams\",\n        \"https://vocabulary.uncefact.org/unece-context-D23B.jsonld\"\n    ],\n    \"id\": \"https://tlip.example.org/act7\",\n    \"type\": \"Create\",\n    \"actor\": {\n        \"type\": \"Organization\",\n        \"id\": \"did:iota:testnet:0x1ee831611a9fe9877c82e05075d9670c4970b4fd0904c208082ee50e45817a9d\"\n    },\n    \"object\": {\n        \"type\": \"Consignment\",\n        \"globalId\": \"24PLP051219453I0026107990533\",\n        \"exporterParty\": {\n            \"identifier\": \"PL527288386100000\",\n            \"identificationType\": \"EORI\"\n        },\n        \"exportTypeCode\": \"09011101\",\n        \"destinationCountry\": {\n            \"type\": \"Country\",\n            \"countryId\": \"unece:CountryId#GB\"\n        }\n    },\n    \"updated\": \"2024-07-13T12:12:29Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:22222/data-space-connector/notify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "22222",
+							"path": [
+								"data-space-connector",
+								"notify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activity Log GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/data-space-connector/activity-logs/urn:x-activity-log:65afd6305af8259d3d6bbe3d30daabeb2e96b454f2cf482cb283380999082955",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"data-space-connector",
+								"activity-logs",
+								"urn:x-activity-log:65afd6305af8259d3d6bbe3d30daabeb2e96b454f2cf482cb283380999082955"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act Notify - Document",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{GTSC_TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"@context\": [\n        \"https://www.w3.org/ns/activitystreams\",\n        \"https://vocabulary.uncefact.org/unece-context-D23B.jsonld\"\n    ],\n    \"generator\": \"did:iota:testnet:0x1ee831611a9fe9877c82e05075d9670c4970b4fd0904c208082ee50e45817a9d\",\n    \"id\": \"https://twin.example.org/act7\",\n    \"type\": \"Add\",\n    \"actor\": {\n        \"id\": \"did:iota:testnet:0x1ee831611a9fe9877c82e05075d9670c4970b4fd0904c208082ee50e45817a9d\",\n        \"type\": \"LegalEntity\"\n    },\n    \"object\": {\n        \"type\": \"Document\",\n        \"documentTypeCode\": \"unece:DocumentCodeList#853\",\n        \"identifier\": \"VET-PL-9566767676\",\n        \"identificationType\": \"GIW-Veterinary-Certificate\",\n        \"issueDateTime\": \"2024-09-22T10:10:10Z\",\n        \"issuerParty\": {\n            \"id\": \"did:iota:testnet:0xfcfa55894cab90504af7eaf38087addd5f77791a89bd3ebbe76d9c2b1a6ce567\"\n        }\n    },\n    \"target\": {\n        \"globalId\": \"24PLP051219453I0026107990533\",\n        \"type\": \"Consignment\"\n    },\n    \"updated\": \"2025-09-22T12:13:58Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:22222/data-space-connector/notify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "22222",
+							"path": [
+								"data-space-connector",
+								"notify"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AIG",
+			"item": [
+				{
+					"name": "AIG GET Vertex",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/auditable-item-graph/aig:7ba1df5c776f841f38469aa902ab5df52076272723bddd87e604ebbec4930ae4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"auditable-item-graph",
+								"aig:7ba1df5c776f841f38469aa902ab5df52076272723bddd87e604ebbec4930ae4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{TWIN_WORKBENCH}}/info",
+					"host": [
+						"{{TWIN_WORKBENCH}}"
+					],
+					"path": [
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Info Salus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{TWIN_WORKBENCH}}/info",
+					"host": [
+						"{{TWIN_WORKBENCH}}"
+					],
+					"path": [
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6aW90YTplNjc4MTIzYToweDIxZjNmOGZlOTY2MDFlYThhYTRjZDA0N2IyMThjYTRhZjdhM2FjZGFlMDcyZTVmY2FhNWQzNWRkNWYyZDE0NmUiLCJleHAiOjE3NDk2NTYzNjN9.n-L2QjIU2Xb7kk2TGIWLCLJXWr_D0CLfzPKQs0g2p_AKVItrNp0uVFIoZSG_YFaCEWD-vn4njA1T9oM0_y66Cg",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

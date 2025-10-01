@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "62c6bdb9-9ead-4c04-baaa-721689172f36",
+		"name": "TWIN-Catalogue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "579084"
+	},
+	"item": [
+		{
+			"name": "Catalogue-IOTA",
+			"item": [
+				{
+					"name": "Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3020/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Participant Registration",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/jwt",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "eyJhbGciOiJFZERTQSIsImlzcyI6ImRpZDppb3RhOnRlc3RuZXQ6MHg4NTg0Nzg3OTNhNTNiYWUyMTM2NDY2ZGM4MDk3NDY2MzM3ZTQxODlhMTk5NDNmOTI4ZmIyN2QzOWE1ZDViYWRkIiwia2lkIjoiZGlkOmlvdGE6dGVzdG5ldDoweDg1ODQ3ODc5M2E1M2JhZTIxMzY0NjZkYzgwOTc0NjYzMzdlNDE4OWExOTk0M2Y5MjhmYjI3ZDM5YTVkNWJhZGQjVTM5d3NJcTRTRG9nSjktb0xSa0JGSnBKX3hVVGZYTlFjQVVqNWpCaEYxNCIsInR5cCI6IkpXVCJ9.eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvbnMvY3JlZGVudGlhbHMvdjIiLCJodHRwczovL3czaWQub3JnL3NlY3VyaXR5L3N1aXRlcy9qd3MtMjAyMC92MSIsImh0dHBzOi8vdzNpZC5vcmcvZ2FpYS14L2RldmVsb3BtZW50Il0sImNyZWRlbnRpYWxTdWJqZWN0Ijp7IkBjb250ZXh0IjoiaHR0cHM6Ly93M2lkLm9yZy9nYWlhLXgvZGV2ZWxvcG1lbnQiLCJpZCI6Imh0dHBzOi8vbXktZGF0YS1yZXNvdXJjZXMuZXhhbXBsZS5vcmcvZG9jcy1yZXNvdXJjZS0xIiwidHlwZSI6IkRhdGFSZXNvdXJjZSJ9LCJldmlkZW5jZSI6eyJjcmVkZW50aWFsVHlwZSI6IlZlcmlmaWFibGVDcmVkZW50aWFsIiwiZGlnZXN0U1JJIjoic2hhMjU2LUJpOTlGcHFPcHVWTWpqejE3LytEcFNndXorMjAyQlNIUlBCN0NJQTNkeHc9IiwiaWQiOiJodHRwczovL3R3aW5mb3VuZGF0aW9uLmdpdGh1Yi5pby9mZWRlcmF0ZWQtY2F0YWxvZ3VlL3B1YmxpYy13ZWIvdGVzdC1jcmVkZW50aWFscy9kYXRhLXJlc291cmNlLTEuanNvbiIsInR5cGUiOiJDb21wbGlhbnRDcmVkZW50aWFsIn0sImlhdCI6MTc0MjgyNTkwMSwiaWQiOiJodHRwczovL2V4YW1wbGUub3JnL2lvdGEvb25ib2FyZGluZy9jcmVkZW50aWFscy8xNzQyODI1OTAxIiwiaXNzdWVyIjoiZGlkOmlvdGE6dGVzdG5ldDoweDg1ODQ3ODc5M2E1M2JhZTIxMzY0NjZkYzgwOTc0NjYzMzdlNDE4OWExOTk0M2Y5MjhmYjI3ZDM5YTVkNWJhZGQiLCJ0eXBlIjpbIlZlcmlmaWFibGVDcmVkZW50aWFsIiwiQ29tcGxpYW5jZUNyZWRlbnRpYWwiXSwidmFsaWRGcm9tIjoiMjAyNS0wMy0yNFQxNDoxODoyMVoiLCJ2YWxpZFVudGlsIjoiMjAyNy0wNy0wNVQyMjoxODoyMVoifQ.Z1m4reL_r1rPx2PIrjC24r2eQOXbki9xzYhHPRdtiWB3eaKjzMerlMBj48XEem3HIRCm5GhCD90KkPAd9zz_Cg",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/federated-catalogue/participant-credentials",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"federated-catalogue",
+								"participant-credentials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Service Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "eyJhbGciOiJFZERTQSIsImlzcyI6ImRpZDppb3RhOnRlc3RuZXQ6MHg4NTg0Nzg3OTNhNTNiYWUyMTM2NDY2ZGM4MDk3NDY2MzM3ZTQxODlhMTk5NDNmOTI4ZmIyN2QzOWE1ZDViYWRkIiwia2lkIjoiZGlkOmlvdGE6dGVzdG5ldDoweDg1ODQ3ODc5M2E1M2JhZTIxMzY0NjZkYzgwOTc0NjYzMzdlNDE4OWExOTk0M2Y5MjhmYjI3ZDM5YTVkNWJhZGQjVTM5d3NJcTRTRG9nSjktb0xSa0JGSnBKX3hVVGZYTlFjQVVqNWpCaEYxNCIsInR5cCI6IkpXVCJ9.eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvbnMvY3JlZGVudGlhbHMvdjIiLCJodHRwczovL3czaWQub3JnL3NlY3VyaXR5L3N1aXRlcy9qd3MtMjAyMC92MSIsImh0dHBzOi8vdzNpZC5vcmcvZ2FpYS14L2RldmVsb3BtZW50Il0sImNyZWRlbnRpYWxTdWJqZWN0Ijp7IkBjb250ZXh0IjoiaHR0cHM6Ly93M2lkLm9yZy9nYWlhLXgvZGV2ZWxvcG1lbnQiLCJpZCI6Imh0dHBzOi8vc2VydmljZS1vZmZlcmluZ3MuZXhhbXBsZS5vcmcvY29tbWVyY2lhbC1pbnZvaWNlLTEiLCJ0eXBlIjoiU2VydmljZU9mZmVyaW5nIn0sImV2aWRlbmNlIjp7ImNyZWRlbnRpYWxUeXBlIjoiVmVyaWZpYWJsZUNyZWRlbnRpYWwiLCJkaWdlc3RTUkkiOiJzaGEyNTYtT2cxVEozTGV6cWR2UFVFRkR2YUJwaGZYMG5oeWpHbG9ESDZPVHoyNjFiVT0iLCJpZCI6Imh0dHBzOi8vdHdpbmZvdW5kYXRpb24uZ2l0aHViLmlvL2ZlZGVyYXRlZC1jYXRhbG9ndWUvcHVibGljLXdlYi90ZXN0LWNyZWRlbnRpYWxzL3NlcnZpY2Utb2ZmZXJpbmctMS5qc29uIiwidHlwZSI6IkNvbXBsaWFudENyZWRlbnRpYWwifSwiaWF0IjoxNzQyODMwODM1LCJpZCI6Imh0dHBzOi8vZXhhbXBsZS5vcmcvaW90YS9vbmJvYXJkaW5nL2NyZWRlbnRpYWxzLzE3NDI4MzA4MzUiLCJpc3N1ZXIiOiJkaWQ6aW90YTp0ZXN0bmV0OjB4ODU4NDc4NzkzYTUzYmFlMjEzNjQ2NmRjODA5NzQ2NjMzN2U0MTg5YTE5OTQzZjkyOGZiMjdkMzlhNWQ1YmFkZCIsInR5cGUiOlsiVmVyaWZpYWJsZUNyZWRlbnRpYWwiLCJDb21wbGlhbmNlQ3JlZGVudGlhbCJdLCJ2YWxpZEZyb20iOiIyMDI1LTAzLTI0VDE1OjQwOjM1WiIsInZhbGlkVW50aWwiOiIyMDI3LTA3LTA1VDIzOjQwOjM1WiJ9.UBytP5WFIk-pZYVy50okQ1yg1fqy9xtJLbwoTsrfHSPYtJoyuxLzbl2SsAKRPEIngiSsG33hgE55pNkr__WnBQ",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/federated-catalogue/service-offering-credentials",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"federated-catalogue",
+								"service-offering-credentials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data Resource Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "eyJhbGciOiJFZERTQSIsImlzcyI6ImRpZDppb3RhOnRlc3RuZXQ6MHg4NTg0Nzg3OTNhNTNiYWUyMTM2NDY2ZGM4MDk3NDY2MzM3ZTQxODlhMTk5NDNmOTI4ZmIyN2QzOWE1ZDViYWRkIiwia2lkIjoiZGlkOmlvdGE6dGVzdG5ldDoweDg1ODQ3ODc5M2E1M2JhZTIxMzY0NjZkYzgwOTc0NjYzMzdlNDE4OWExOTk0M2Y5MjhmYjI3ZDM5YTVkNWJhZGQjVTM5d3NJcTRTRG9nSjktb0xSa0JGSnBKX3hVVGZYTlFjQVVqNWpCaEYxNCIsInR5cCI6IkpXVCJ9.eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvbnMvY3JlZGVudGlhbHMvdjIiLCJodHRwczovL3czaWQub3JnL3NlY3VyaXR5L3N1aXRlcy9qd3MtMjAyMC92MSIsImh0dHBzOi8vdzNpZC5vcmcvZ2FpYS14L2RldmVsb3BtZW50Il0sImNyZWRlbnRpYWxTdWJqZWN0Ijp7IkBjb250ZXh0IjoiaHR0cHM6Ly93M2lkLm9yZy9nYWlhLXgvZGV2ZWxvcG1lbnQiLCJpZCI6Imh0dHBzOi8vbXktZGF0YS1yZXNvdXJjZXMuZXhhbXBsZS5vcmcvZG9jcy1yZXNvdXJjZS0xIiwidHlwZSI6IkRhdGFSZXNvdXJjZSJ9LCJldmlkZW5jZSI6eyJjcmVkZW50aWFsVHlwZSI6IlZlcmlmaWFibGVDcmVkZW50aWFsIiwiZGlnZXN0U1JJIjoic2hhMjU2LUJpOTlGcHFPcHVWTWpqejE3LytEcFNndXorMjAyQlNIUlBCN0NJQTNkeHc9IiwiaWQiOiJodHRwczovL3R3aW5mb3VuZGF0aW9uLmdpdGh1Yi5pby9mZWRlcmF0ZWQtY2F0YWxvZ3VlL3B1YmxpYy13ZWIvdGVzdC1jcmVkZW50aWFscy9kYXRhLXJlc291cmNlLTEuanNvbiIsInR5cGUiOiJDb21wbGlhbnRDcmVkZW50aWFsIn0sImlhdCI6MTc0MjgyNTkwMSwiaWQiOiJodHRwczovL2V4YW1wbGUub3JnL2lvdGEvb25ib2FyZGluZy9jcmVkZW50aWFscy8xNzQyODI1OTAxIiwiaXNzdWVyIjoiZGlkOmlvdGE6dGVzdG5ldDoweDg1ODQ3ODc5M2E1M2JhZTIxMzY0NjZkYzgwOTc0NjYzMzdlNDE4OWExOTk0M2Y5MjhmYjI3ZDM5YTVkNWJhZGQiLCJ0eXBlIjpbIlZlcmlmaWFibGVDcmVkZW50aWFsIiwiQ29tcGxpYW5jZUNyZWRlbnRpYWwiXSwidmFsaWRGcm9tIjoiMjAyNS0wMy0yNFQxNDoxODoyMVoiLCJ2YWxpZFVudGlsIjoiMjAyNy0wNy0wNVQyMjoxODoyMVoifQ.Z1m4reL_r1rPx2PIrjC24r2eQOXbki9xzYhHPRdtiWB3eaKjzMerlMBj48XEem3HIRCm5GhCD90KkPAd9zz_Cg",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/federated-catalogue/data-resource-credentials",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"federated-catalogue",
+								"data-resource-credentials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data Space Connector Registratoion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "eyJhbGciOiJFZERTQSIsImlzcyI6ImRpZDppb3RhOnRlc3RuZXQ6MHg4NTg0Nzg3OTNhNTNiYWUyMTM2NDY2ZGM4MDk3NDY2MzM3ZTQxODlhMTk5NDNmOTI4ZmIyN2QzOWE1ZDViYWRkIiwia2lkIjoiZGlkOmlvdGE6dGVzdG5ldDoweDg1ODQ3ODc5M2E1M2JhZTIxMzY0NjZkYzgwOTc0NjYzMzdlNDE4OWExOTk0M2Y5MjhmYjI3ZDM5YTVkNWJhZGQjVTM5d3NJcTRTRG9nSjktb0xSa0JGSnBKX3hVVGZYTlFjQVVqNWpCaEYxNCIsInR5cCI6IkpXVCJ9.eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvbnMvY3JlZGVudGlhbHMvdjIiLCJodHRwczovL3czaWQub3JnL3NlY3VyaXR5L3N1aXRlcy9qd3MtMjAyMC92MSIsImh0dHBzOi8vdzNpZC5vcmcvZ2FpYS14L2RldmVsb3BtZW50Il0sImNyZWRlbnRpYWxTdWJqZWN0Ijp7IkBjb250ZXh0IjpbImh0dHBzOi8vdzNpZC5vcmcvZ2FpYS14L2RldmVsb3BtZW50Iix7IkRhdGFTcGFjZUNvbm5lY3RvciI6Imh0dHBzOi8vdzNpZC5vcmcvdHdpbi9kcy1jb25uZWN0b3IvRGF0YVNwYWNlQ29ubmVjdG9yIn1dLCJpZCI6Imh0dHBzOi8vbXktZHMtY29ubmVjdG9ycy5leGFtcGxlLm9yZy9kcy1jb25uZWN0b3ItQUJDRCIsInR5cGUiOlsiRGF0YUV4Y2hhbmdlQ29tcG9uZW50IiwiRGF0YVNwYWNlQ29ubmVjdG9yIl19LCJldmlkZW5jZSI6eyJjcmVkZW50aWFsVHlwZSI6IlZlcmlmaWFibGVDcmVkZW50aWFsIiwiZGlnZXN0U1JJIjoic2hhMjU2LTZIdEk1ZDFSTU8xM0dnVXNGYnoraSsrODY4N0hFUWRRL2pVUGh3UnpGYlk9IiwiaWQiOiJodHRwczovL3R3aW5mb3VuZGF0aW9uLmdpdGh1Yi5pby9mZWRlcmF0ZWQtY2F0YWxvZ3VlL3B1YmxpYy13ZWIvdGVzdC1jcmVkZW50aWFscy9kYXRhLXNwYWNlLWNvbm5lY3Rvci0xLmpzb24iLCJ0eXBlIjoiQ29tcGxpYW50Q3JlZGVudGlhbCJ9LCJpYXQiOjE3NDI4MzE5NzAsImlkIjoiaHR0cHM6Ly9leGFtcGxlLm9yZy9pb3RhL29uYm9hcmRpbmcvY3JlZGVudGlhbHMvMTc0MjgzMTk3MCIsImlzc3VlciI6ImRpZDppb3RhOnRlc3RuZXQ6MHg4NTg0Nzg3OTNhNTNiYWUyMTM2NDY2ZGM4MDk3NDY2MzM3ZTQxODlhMTk5NDNmOTI4ZmIyN2QzOWE1ZDViYWRkIiwidHlwZSI6WyJWZXJpZmlhYmxlQ3JlZGVudGlhbCIsIkNvbXBsaWFuY2VDcmVkZW50aWFsIl0sInZhbGlkRnJvbSI6IjIwMjUtMDMtMjRUMTU6NTk6MzBaIiwidmFsaWRVbnRpbCI6IjIwMjctMDctMDVUMjM6NTk6MzBaIn0.l9sfWCTBtfjs-k8VItAEznaM2HSWYrIPNgYmVAv30p-Y81TuI5Xw8ln74EwiU_g6urdTPUU0kd01lM3E72ULCg",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3020/federated-catalogue/data-space-connector-credentials",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"federated-catalogue",
+								"data-space-connector-credentials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Participant Registrations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3020/federated-catalogue/participants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"federated-catalogue",
+								"participants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Participant Entry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3020/federated-catalogue/participants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"federated-catalogue",
+								"participants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Service Registrations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3020/federated-catalogue/service-offerings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"federated-catalogue",
+								"service-offerings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data Resources",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3020/federated-catalogue/data-resources",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"federated-catalogue",
+								"data-resources"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data Space Connectors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3020/federated-catalogue/data-space-connectors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"federated-catalogue",
+								"data-space-connectors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data Space Connector Entry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3020/federated-catalogue/data-space-connectors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3020",
+							"path": [
+								"federated-catalogue",
+								"data-space-connectors"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gaia-X JSON-LD Context",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://w3id.org/gaia-x/development",
+					"protocol": "https",
+					"host": [
+						"w3id",
+						"org"
+					],
+					"path": [
+						"gaia-x",
+						"development"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dublin Core",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
